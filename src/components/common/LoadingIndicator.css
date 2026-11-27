@@ -1,0 +1,31 @@
+.loading-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.loading-indicator__dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.loading-indicator__dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  animation: cs-dot-bounce 1.2s ease-in-out infinite;
+}
+
+.loading-indicator__dots span:nth-child(2) {
+  animation-delay: 0.14s;
+}
+
+.loading-indicator__dots span:nth-child(3) {
+  animation-delay: 0.28s;
+}

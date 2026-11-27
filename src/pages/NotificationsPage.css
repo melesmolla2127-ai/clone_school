@@ -1,0 +1,89 @@
+.notifications-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-bottom: var(--space-10);
+  animation: cs-fade-in 260ms ease both;
+}
+
+.notifications-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.notifications-page__actions .button {
+  min-height: 46px;
+  gap: 8px;
+  padding: 0 var(--space-4);
+  justify-content: center;
+  font-size: 12px;
+}
+
+.notifications-page__clear {
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text-secondary);
+}
+
+.notifications-page__summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.notifications-page__summary-icon {
+  display: grid;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--color-blue-soft);
+  color: var(--color-blue-primary);
+}
+
+.notifications-page__summary-copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.notifications-page__summary-copy strong {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.notifications-page__summary-copy span {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+}
+
+.notifications-page__unread-badge {
+  flex: none;
+  padding: 7px 11px;
+  border-radius: var(--radius-full);
+  background: var(--color-blue-soft);
+  color: var(--color-blue-primary);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.notifications-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+@media (min-width: 760px) {
+  .notifications-page {
+    gap: var(--space-6);
+  }
+}

@@ -1,0 +1,15 @@
+.archive-exam-page { display:flex; flex-direction:column; gap:24px; }
+.archive-exam-intro__grid { display:grid; gap:20px; }
+.archive-exam-intro h2 { margin-top:8px; font-size:28px; font-weight:800; }
+.archive-exam-details { display:grid; gap:10px; margin-top:18px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.archive-exam-details div { padding:12px; border:1px solid var(--color-border); border-radius:12px; background:var(--color-bg-light); }
+.archive-exam-details dt { color:var(--color-text-secondary); font-size:11px; font-weight:700; }
+.archive-exam-details dd { margin-top:4px; font-size:13px; font-weight:800; }
+.archive-exam-source { margin-top:16px; color:var(--color-text-secondary); font-size:12px; line-height:1.6; }
+.archive-exam-start { padding:20px; border:1px solid var(--color-border); border-radius:16px; background:linear-gradient(180deg,#eff6ff,#fff); }
+.archive-exam-start h3 { font-size:20px; font-weight:800; }
+.archive-exam-start p { margin-top:8px; color:var(--color-text-secondary); font-size:13px; line-height:1.6; }
+.archive-timer-toggle { display:flex; align-items:center; gap:10px; margin:18px 0; font-size:13px; font-weight:650; }
+.archive-timer-toggle input { width:18px; height:18px; }
+.archive-exam-start .button, .euee-exam-submit .button { width:100%; }
+@media (min-width:900px){ .archive-exam-intro__grid{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); align-items:start;} }

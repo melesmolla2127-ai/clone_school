@@ -1,0 +1,135 @@
+.euee-results-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.euee-results-summary {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, var(--color-navy-deep), var(--color-navy-surface));
+  color: var(--color-white);
+  box-shadow: 0 20px 46px rgba(7, 20, 38, 0.2);
+}
+
+.euee-results-summary__score {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.euee-results-summary__icon {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  place-items: center;
+  border-radius: 20px;
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--color-blue-light);
+}
+
+.euee-results-summary h2 {
+  margin-top: 6px;
+  font-size: clamp(32px, 6vw, 44px);
+  font-weight: 800;
+}
+
+.euee-results-summary p {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+}
+
+.euee-results-summary__stats {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.euee-results-stat {
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.euee-results-stat span {
+  display: block;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.euee-results-stat strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.euee-results-recommendation {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  background: var(--color-blue-soft);
+  color: var(--color-blue-primary);
+}
+
+.euee-results-recommendation strong {
+  display: block;
+  font-size: 13px;
+}
+
+.euee-results-recommendation p {
+  margin-top: 4px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.euee-results-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.euee-results-lists {
+  display: grid;
+  gap: 16px;
+}
+
+.euee-results-lists h3 {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.euee-results-lists p {
+  margin-top: 6px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+@media (min-width: 720px) {
+  .euee-results-summary__stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .euee-results-actions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .euee-results-lists {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .euee-results-summary {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+  }
+}

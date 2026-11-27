@@ -1,0 +1,208 @@
+.math-game__difficulty {
+  display: grid;
+  width: 100%;
+  max-width: 440px;
+  gap: var(--space-2);
+  text-align: left;
+}
+
+.math-game__difficulty > span {
+  color: var(--color-text-secondary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.math-game__difficulty > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.math-game__level {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+  padding: var(--space-3) var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  text-align: center;
+}
+
+.math-game__level strong {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.math-game__level small {
+  color: var(--color-text-secondary);
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.math-game__level--active {
+  border-color: var(--color-blue-primary);
+  background: var(--color-blue-soft);
+  color: var(--color-blue-primary);
+}
+
+.math-game {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-4);
+}
+
+.math-game__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.math-game__timer,
+.math-game__streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-light);
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.math-game__streak {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.math-game__prompt {
+  padding: var(--space-6) var(--space-4);
+  border-radius: var(--radius-md);
+  background: linear-gradient(140deg, var(--color-blue-soft), var(--color-white));
+  text-align: center;
+}
+
+.math-game__prompt span {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.math-game__prompt h2 {
+  margin-top: 7px;
+  color: var(--color-blue-primary);
+  font-size: clamp(27px, 8vw, 40px);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.math-game__options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.math-game__option {
+  min-width: 0;
+  min-height: 54px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-text-primary);
+  font-size: 17px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.math-game__option:not(:disabled):hover {
+  border-color: var(--color-blue-primary);
+  background: var(--color-blue-soft);
+}
+
+.math-game__option:disabled {
+  opacity: 1;
+}
+
+.math-game__option--correct {
+  border-color: var(--color-blue-primary);
+  background: var(--color-blue-soft);
+  color: var(--color-blue-primary);
+}
+
+.math-game__option--wrong {
+  border-color: #dc2626;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.math-game__option--answer {
+  border-color: #93c5fd;
+  background: var(--color-blue-soft);
+}
+
+.math-game__feedback {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-light);
+  color: var(--color-text-secondary);
+}
+
+.math-game__feedback--correct {
+  background: var(--color-blue-soft);
+  color: var(--color-blue-primary);
+}
+
+.math-game__feedback svg {
+  flex: none;
+  margin-top: 2px;
+}
+
+.math-game__feedback strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.math-game__feedback p {
+  margin-top: 3px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.math-game__next {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-blue-primary);
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.math-game__summary {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+@media (min-width: 600px) {
+  .math-game__next {
+    width: fit-content;
+    margin-left: auto;
+  }
+}

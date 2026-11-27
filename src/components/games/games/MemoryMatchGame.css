@@ -1,0 +1,121 @@
+.memory-game {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-4);
+}
+
+.memory-game__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.memory-game__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-light);
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.memory-game__grid {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.memory-card {
+  min-width: 0;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  perspective: 900px;
+}
+
+.memory-card__inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 520ms var(--ease-out);
+}
+
+.memory-card--flipped .memory-card__inner {
+  transform: rotateY(180deg);
+}
+
+.memory-card__face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.memory-card__face--back {
+  background: linear-gradient(145deg, #7c3aed, #4c1d95);
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 18px rgba(76, 29, 149, 0.22);
+}
+
+.memory-card:hover .memory-card__face--back {
+  filter: brightness(1.08);
+}
+
+.memory-card__face--front {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: #7c3aed;
+  transform: rotateY(180deg);
+}
+
+.memory-card__face--front small {
+  width: 100%;
+  color: var(--color-text-secondary);
+  font-size: 9px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.memory-card--matched .memory-card__face--front {
+  border-color: #86efac;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.memory-game__summary {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+@media (min-width: 500px) {
+  .memory-game__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 700px) {
+  .memory-game__grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

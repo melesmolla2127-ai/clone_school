@@ -1,0 +1,71 @@
+.browser-reminder {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-blue-light);
+  border-radius: var(--radius-md);
+  background: var(--color-blue-soft);
+}
+
+.browser-reminder__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.browser-reminder__icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--color-white);
+  color: var(--color-blue-primary);
+}
+
+.browser-reminder strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.browser-reminder p {
+  margin-top: 3px;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.browser-reminder__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.browser-reminder__permission {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.browser-reminder .button {
+  min-height: 42px;
+  padding: 0 var(--space-4);
+  font-size: 12px;
+}
+
+[data-theme='dark'] .browser-reminder {
+  border-color: var(--color-border);
+  background: var(--color-navy-dark);
+}
+
+[data-theme='dark'] .browser-reminder__icon {
+  background: var(--color-navy-surface);
+}

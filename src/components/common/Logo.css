@@ -1,0 +1,83 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo__mark-wrap {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+}
+
+.logo__mark-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 12%;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--color-blue-bright);
+  filter: blur(18px);
+  opacity: 0.45;
+}
+
+.logo__mark {
+  display: block;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.logo__wordmark {
+  display: flex;
+  flex-direction: column;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.logo__wordmark strong {
+  font-weight: 800;
+}
+
+.logo__wordmark span {
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.logo--light .logo__wordmark {
+  color: var(--color-white);
+}
+
+.logo--dark .logo__wordmark {
+  color: var(--color-text-primary);
+}
+
+.logo--small {
+  gap: 10px;
+}
+
+.logo--small .logo__mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+}
+
+.logo--small .logo__wordmark {
+  font-size: 18px;
+}
+
+.logo--large {
+  gap: 14px;
+}
+
+.logo--large .logo__mark {
+  width: 76px;
+  height: 76px;
+  border-radius: 22px;
+}
+
+.logo--large .logo__wordmark {
+  font-size: 28px;
+}

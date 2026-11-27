@@ -1,0 +1,125 @@
+.reminder-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: clamp(20px, 5vw, 28px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(150deg, var(--color-white), var(--color-blue-soft));
+  box-shadow: var(--shadow-sm);
+  animation: cs-fade-up 460ms var(--ease-out) both;
+}
+
+.reminder-card__top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.reminder-card__icon {
+  display: grid;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--color-blue-primary);
+  color: var(--color-white);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+}
+
+.reminder-card__heading {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.reminder-card__title {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.reminder-card__status {
+  padding: 5px 9px;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.reminder-card__status--active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.reminder-card__status--paused {
+  background: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.reminder-card__message {
+  color: var(--color-text-primary);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.reminder-card__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.reminder-card__detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.reminder-card__detail svg {
+  color: var(--color-blue-primary);
+}
+
+.reminder-card__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-blue-light);
+  color: var(--color-navy-dark);
+}
+
+.reminder-card__notice svg {
+  flex: none;
+  margin-top: 2px;
+  color: var(--color-blue-primary);
+}
+
+.reminder-card__notice p {
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.reminder-card__button {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--color-blue-light);
+  justify-content: center;
+  font-size: 12px;
+}
+
+.reminder-card__permission {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}

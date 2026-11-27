@@ -1,0 +1,143 @@
+.euee-exam-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.euee-exam-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.euee-exam-presets {
+  display: grid;
+  gap: 12px;
+}
+
+.euee-exam-preset {
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-light);
+  text-align: left;
+}
+
+.euee-exam-preset strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.euee-exam-preset span {
+  display: block;
+  margin-top: 6px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.euee-exam-preset small {
+  display: block;
+  margin-top: 10px;
+  color: var(--color-blue-primary);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.euee-exam-preset--active {
+  border-color: var(--color-blue-primary);
+  background: var(--color-blue-soft);
+}
+
+.euee-exam-session {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.euee-exam-topbar {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 14px;
+  flex-direction: column;
+}
+
+.euee-exam-topbar h2 {
+  margin-top: 6px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.euee-exam-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-blue-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.euee-exam-timer span {
+  display: block;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.euee-exam-timer strong {
+  font-size: 22px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.euee-exam-timer--warning {
+  border-color: #fdba74;
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.euee-exam-layout {
+  display: grid;
+  gap: 16px;
+}
+
+.euee-exam-main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.euee-exam-actions,
+.euee-exam-submit {
+  display: grid;
+  gap: 10px;
+}
+
+.euee-exam-submit .button {
+  width: 100%;
+}
+
+@media (min-width: 720px) {
+  .euee-exam-presets {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .euee-exam-topbar {
+    flex-direction: row;
+    align-items: center;
+  }
+  .euee-exam-actions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .euee-exam-layout {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    align-items: start;
+  }
+}

@@ -1,0 +1,83 @@
+.challenge-card {
+  position: relative;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  padding: clamp(20px, 5vw, 26px);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(150deg, var(--color-blue-primary), var(--color-navy-dark));
+  color: var(--color-white);
+  box-shadow: 0 20px 44px rgba(37, 99, 235, 0.24);
+}
+
+.challenge-card::after {
+  position: absolute;
+  right: -60px;
+  bottom: -70px;
+  width: 210px;
+  height: 210px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, rgba(219, 234, 254, 0.4), transparent 70%);
+  content: '';
+  pointer-events: none;
+}
+
+.challenge-card__top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.challenge-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.challenge-card__points {
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.challenge-card h3 {
+  position: relative;
+  z-index: 1;
+  margin-top: 28px;
+  font-size: clamp(24px, 5vw, 30px);
+  font-weight: 800;
+}
+
+.challenge-card p {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.challenge-card__button {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-top: auto;
+  background: var(--color-white);
+  color: var(--color-blue-primary);
+  box-shadow: none;
+}
+
+.challenge-card__button:hover {
+  box-shadow: 0 12px 24px rgba(7, 20, 38, 0.2);
+}

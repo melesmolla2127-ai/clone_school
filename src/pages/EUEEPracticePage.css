@@ -1,0 +1,107 @@
+.euee-practice-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.euee-panel {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.euee-practice-setup__grid {
+  display: grid;
+  gap: 20px;
+}
+
+.euee-practice-setup__fields {
+  display: grid;
+  gap: 14px;
+}
+
+.euee-practice-setup__actions,
+.euee-practice-complete__actions,
+.euee-session-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.euee-practice-history {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.euee-practice-session {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.euee-session-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.euee-session-meta strong {
+  color: var(--color-blue-primary);
+  font-size: 14px;
+}
+
+.euee-practice-complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.euee-practice-complete__icon {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border-radius: 20px;
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.euee-practice-complete h2 {
+  margin-top: 16px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.euee-practice-complete p {
+  margin-top: 8px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.euee-practice-complete .progress-track {
+  width: min(100%, 360px);
+  margin-top: 20px;
+}
+
+.euee-practice-complete__actions {
+  width: min(100%, 360px);
+}
+
+@media (min-width: 720px) {
+  .euee-practice-setup__grid {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  }
+  .euee-practice-setup__actions,
+  .euee-practice-complete__actions,
+  .euee-session-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

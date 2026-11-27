@@ -1,0 +1,101 @@
+.coming-soon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100dvh - 140px);
+}
+
+.coming-soon__glow {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  width: 320px;
+  height: 320px;
+  margin-left: -160px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.24), transparent 70%);
+  pointer-events: none;
+}
+
+.coming-soon__card {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  padding: clamp(28px, 7vw, 44px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  animation: cs-fade-up 520ms var(--ease-out) both;
+}
+
+.coming-soon__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.coming-soon__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: var(--radius-full);
+  background: var(--color-blue-soft);
+  color: var(--color-blue-primary);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.coming-soon__icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  margin: 34px auto 22px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--color-blue-bright), var(--color-blue-primary));
+  color: var(--color-white);
+  box-shadow: 0 16px 34px rgba(37, 99, 235, 0.28);
+}
+
+.coming-soon__eyebrow {
+  color: var(--color-blue-primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.coming-soon h1 {
+  margin-top: 10px;
+  font-size: clamp(30px, 7vw, 40px);
+  font-weight: 800;
+}
+
+.coming-soon__description {
+  margin-top: 14px;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.coming-soon__extra {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--color-border);
+}
+
+.coming-soon__button {
+  width: 100%;
+  margin-top: 28px;
+}
+
+@media (min-width: 900px) {
+  .coming-soon {
+    min-height: calc(100dvh - 180px);
+  }
+}

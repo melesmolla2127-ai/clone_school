@@ -1,0 +1,134 @@
+.quick-access__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.quick-access__card {
+  display: flex;
+  min-width: 0;
+  min-height: 92px;
+  align-items: center;
+  gap: 11px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-fast);
+  animation: cs-fade-up 460ms var(--ease-out) both;
+}
+
+.quick-access__card:nth-child(2) {
+  animation-delay: 50ms;
+}
+
+.quick-access__card:nth-child(3) {
+  animation-delay: 100ms;
+}
+
+.quick-access__card:nth-child(4) {
+  animation-delay: 150ms;
+}
+
+.quick-access__card:nth-child(5) {
+  animation-delay: 200ms;
+}
+
+.quick-access__card:nth-child(6) {
+  animation-delay: 250ms;
+}
+
+.quick-access__card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: var(--shadow-md);
+}
+
+.quick-access__card:active {
+  transform: translateY(0);
+}
+
+.quick-access__icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--color-blue-soft);
+  color: var(--color-blue-primary);
+}
+
+.quick-access__card--sky .quick-access__icon {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.quick-access__card--navy .quick-access__icon {
+  background: rgba(16, 35, 63, 0.08);
+  color: var(--color-navy-dark);
+}
+
+.quick-access__card--indigo .quick-access__icon {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.quick-access__card--cyan .quick-access__icon {
+  background: #ecfeff;
+  color: #0e7490;
+}
+
+.quick-access__copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.quick-access__copy strong {
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quick-access__copy small {
+  overflow: hidden;
+  color: var(--color-text-secondary);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quick-access__chevron {
+  flex: none;
+  color: var(--color-text-secondary);
+}
+
+@media (min-width: 720px) {
+  .quick-access__grid {
+    gap: 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .quick-access__card {
+    min-height: 100px;
+    padding: 16px;
+  }
+
+  .quick-access__copy strong {
+    font-size: 14px;
+  }
+
+  .quick-access__copy small {
+    font-size: 11px;
+  }
+}

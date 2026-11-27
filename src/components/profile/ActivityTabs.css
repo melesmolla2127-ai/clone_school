@@ -1,0 +1,66 @@
+.activity-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.activity-tabs__kicker {
+  display: inline-block;
+  color: var(--color-blue-primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.activity-tabs__heading h2 {
+  margin-top: var(--space-2);
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.activity-tabs__heading p {
+  margin-top: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.activity-tabs__list {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-1);
+}
+
+.activity-tabs__tab {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 13px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.activity-tabs__tab--active {
+  border-color: var(--color-blue-primary);
+  background: var(--color-blue-primary);
+  color: var(--color-white);
+}
+
+.activity-tabs__panel {
+  min-height: 180px;
+}
+
+[data-theme='dark'] .activity-tabs__tab {
+  background: var(--color-navy-surface);
+}
+
+[data-theme='dark'] .activity-tabs__tab--active {
+  background: var(--color-blue-primary);
+}

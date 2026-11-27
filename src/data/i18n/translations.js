@@ -1,0 +1,73 @@
+export const LANGUAGE_OPTIONS = [
+  { id: 'en', label: 'English', nativeLabel: 'English' },
+  { id: 'am', label: 'Amharic', nativeLabel: 'አማርኛ' },
+  { id: 'om', label: 'Afaan Oromoo', nativeLabel: 'Afaan Oromoo' },
+]
+
+export const TRANSLATIONS = {
+  en: {
+    'nav.courses': 'Courses',
+    'nav.games': 'Games',
+    'nav.home': 'Home',
+    'nav.euee': 'EUEE',
+    'nav.profile': 'Profile',
+    'settings.title': 'Settings',
+    'settings.subtitle': 'Make Clone School fit the way you study.',
+    'settings.appearance': 'Appearance',
+    'settings.language': 'Language',
+    'settings.notifications': 'Notifications',
+    'settings.learning': 'Learning preferences',
+    'settings.privacy': 'Privacy & security',
+    'settings.theme': 'Theme',
+    'settings.light': 'Light',
+    'settings.dark': 'Dark',
+    'settings.system': 'System',
+    'settings.save': 'Save changes',
+    'common.saved': 'Changes saved',
+  },
+  am: {
+    'nav.courses': 'ኮርሶች',
+    'nav.games': 'ጨዋታዎች',
+    'nav.home': 'መነሻ',
+    'nav.euee': 'EUEE',
+    'nav.profile': 'መገለጫ',
+    'settings.title': 'ቅንብሮች',
+    'settings.subtitle': 'Clone School ን ለእርስዎ የማስማር ሁኔታዎችን ያዘጋጁ።',
+    'settings.appearance': 'መልክ',
+    'settings.language': 'ቋንቋ',
+    'settings.notifications': 'ማሳወቂያዎች',
+    'settings.learning': 'የመማር ምርጫዎች',
+    'settings.privacy': 'ግላዊነትና ደህንነት',
+    'settings.theme': 'ገጽታ',
+    'settings.light': 'ብርሃን',
+    'settings.dark': 'ጨለማ',
+    'settings.system': 'የመሣሪያ',
+    'settings.save': 'ለውጦችን አስቀምጥ',
+    'common.saved': 'ለውጦች ተቀምጠዋል',
+  },
+  om: {
+    'nav.courses': 'Kursitoota',
+    'nav.games': 'Taphoota',
+    'nav.home': 'Mana',
+    'nav.euee': 'EUEE',
+    'nav.profile': 'Profayilii',
+    'settings.title': 'Hangiila',
+    'settings.subtitle': 'Clone School akka hawwii keetti taasisiifii.',
+    'settings.appearance': 'Bifa',
+    'settings.language': 'Afaan',
+    'settings.notifications': 'Hima duraa',
+    'settings.learning': 'Filannoo barumsaa',
+    'settings.privacy': 'Dhuuxaa fi nageenya',
+    'settings.theme': 'Bifa',
+    'settings.light': 'Iftoo',
+    'settings.dark': 'Dukkana',
+    'settings.system': 'Sistema',
+    'settings.save': 'Jijjiirama olkaa’i',
+    'common.saved': 'Jijjiiraman olkaa’ame',
+  },
+}
+
+export function translate(language, key) {
+  const bundle = TRANSLATIONS[language] ?? TRANSLATIONS.en
+  return bundle[key] ?? TRANSLATIONS.en[key] ?? key
+}

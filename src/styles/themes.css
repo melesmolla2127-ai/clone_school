@@ -1,0 +1,47 @@
+[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg-light: #071426;
+  --color-navy-deep: #040c18;
+  --color-navy-dark: #0b1930;
+  --color-navy-surface: #10233f;
+  --color-blue-light: #1d3b6b;
+  --color-blue-soft: #10233f;
+  --color-text-primary: #e8f0fb;
+  --color-text-secondary: #9aabc2;
+  --color-border: #263a5a;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.36);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.48);
+}
+
+[data-theme='dark'] body {
+  background: var(--color-bg-light);
+  color: var(--color-text-primary);
+}
+
+[data-theme='dark'] .app-shell {
+  background:
+    radial-gradient(circle at 16% -10%, rgba(37, 99, 235, 0.28), transparent 42%),
+    radial-gradient(circle at 88% 8%, rgba(59, 130, 246, 0.18), transparent 38%),
+    var(--color-bg-light);
+}
+
+[data-theme='dark'] :is(section, article, [class*='__card'], [class*='-card'], .game-shell, .coming-soon__card, .text-field, .select-field) {
+  background-color: var(--color-navy-surface);
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+[data-theme='dark'] :is(input, select, textarea) {
+  color: var(--color-text-primary);
+}
+
+[data-theme='dark'] [data-reduced-motion='true'] *,
+[data-reduced-motion='true'] *,
+[data-reduced-motion='true'] *::before,
+[data-reduced-motion='true'] *::after {
+  scroll-behavior: auto !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}

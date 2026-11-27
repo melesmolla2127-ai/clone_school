@@ -1,0 +1,366 @@
+.game-shell {
+  --game-accent: var(--color-blue-primary);
+  --game-accent-strong: var(--color-blue-primary);
+  --game-soft: var(--color-blue-soft);
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-md);
+}
+
+.game-shell--purple {
+  --game-accent: #7c3aed;
+  --game-soft: #f5f3ff;
+}
+
+.game-shell--green {
+  --game-accent: #16a34a;
+  --game-soft: #f0fdf4;
+}
+
+.game-shell--orange {
+  --game-accent: #ea580c;
+  --game-soft: #fff7ed;
+}
+
+.game-shell--cyan {
+  --game-accent: #0891b2;
+  --game-soft: #ecfeff;
+}
+
+.game-shell--amber {
+  --game-accent: #d97706;
+  --game-soft: #fffbeb;
+}
+
+.game-shell--indigo {
+  --game-accent: #4f46e5;
+  --game-soft: #eef2ff;
+}
+
+.game-shell--rose {
+  --game-accent: #e11d48;
+  --game-soft: #fff1f2;
+}
+
+.game-shell--math-challenge {
+  border-top: 4px solid var(--game-accent);
+}
+
+.game-shell--memory-match {
+  border-radius: var(--radius-xl);
+}
+
+.game-shell--vocabulary-challenge {
+  border-top: 4px dashed var(--game-accent);
+}
+
+.game-shell--spelling-challenge {
+  border-style: double;
+  border-width: 3px;
+}
+
+.game-shell--science-quiz {
+  border-left: 4px solid var(--game-accent);
+}
+
+.game-shell--speed-quiz {
+  border-top: 4px solid var(--game-accent);
+  box-shadow: 0 18px 44px rgba(217, 119, 6, 0.16);
+}
+
+.game-shell--logic-challenge {
+  border-right: 4px solid var(--game-accent);
+}
+
+.game-shell--number-challenge {
+  border-bottom: 4px solid var(--game-accent);
+}
+
+.game-shell__intro,
+.game-shell__result {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-5);
+  text-align: center;
+}
+
+.game-shell__daily-badge,
+.game-shell__play-daily {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  background: var(--game-soft);
+  color: var(--game-accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.game-shell__hero-icon,
+.game-shell__result-icon {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  flex: none;
+  place-items: center;
+  border-radius: 22px;
+  background: linear-gradient(140deg, var(--game-soft), var(--color-white));
+  color: var(--game-accent);
+  box-shadow: inset 0 0 0 1px var(--color-border);
+}
+
+.game-shell--memory-match .game-shell__hero-icon {
+  border-radius: 50%;
+}
+
+.game-shell--logic-challenge .game-shell__hero-icon {
+  border-radius: 14px;
+  transform: rotate(-6deg);
+}
+
+.game-shell--speed-quiz .game-shell__hero-icon {
+  border-radius: 18px 30px 18px 30px;
+}
+
+.game-shell__kicker {
+  color: var(--game-accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.game-shell__intro h1,
+.game-shell__result h1 {
+  font-size: clamp(26px, 7vw, 38px);
+  font-weight: 800;
+}
+
+.game-shell__description,
+.game-shell__result-score {
+  max-width: 46ch;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.game-shell__result-score strong {
+  color: var(--color-text-primary);
+}
+
+.game-shell__instructions {
+  display: grid;
+  gap: var(--space-2);
+  width: 100%;
+  max-width: 440px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.game-shell__instructions li {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.game-shell__instructions li::before {
+  flex: none;
+  color: var(--game-accent);
+  font-weight: 800;
+  content: '✓';
+}
+
+.game-shell__best {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.game-shell__best strong {
+  color: var(--game-accent);
+}
+
+.game-shell__intro .button,
+.game-shell__result .button {
+  width: 100%;
+  max-width: 320px;
+}
+
+.game-shell__play {
+  min-width: 0;
+}
+
+.game-shell__play-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.game-shell__exit {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 11px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-light);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.game-shell__exit:hover {
+  background: var(--game-soft);
+  color: var(--game-accent);
+}
+
+.game-shell__score-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  border-radius: var(--radius-full);
+  background: var(--game-soft);
+  color: var(--game-accent);
+  font-size: 13px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.game-shell__progress {
+  height: 5px;
+  background: var(--color-border);
+}
+
+.game-shell__progress span {
+  display: block;
+  height: 100%;
+  border-radius: 0 var(--radius-full) var(--radius-full) 0;
+  background: var(--game-accent);
+  transition: width var(--transition-base);
+}
+
+.game-shell__play-daily {
+  display: flex;
+  width: fit-content;
+  margin: var(--space-4) auto 0;
+}
+
+.game-shell__play-body {
+  min-width: 0;
+  padding: var(--space-5) var(--space-4) var(--space-8);
+}
+
+.game-shell__result-icon {
+  background: linear-gradient(140deg, #fef9c3, #fffbeb);
+  color: #ca8a04;
+}
+
+.game-shell__result-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.game-shell__result-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: var(--radius-full);
+  background: var(--game-soft);
+  color: var(--game-accent);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.game-shell__badges {
+  width: 100%;
+  max-width: 440px;
+  text-align: left;
+}
+
+.game-shell__badges h2 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: var(--space-2);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.game-shell__badge-list {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.game-shell__badge-list > span {
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-light);
+}
+
+.game-shell__badge-list strong {
+  font-size: 12px;
+}
+
+.game-shell__badge-list small {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+}
+
+.game-shell__result-actions {
+  display: flex;
+  width: 100%;
+  max-width: 440px;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.game-shell__result-actions .button {
+  max-width: none;
+}
+
+@media (min-width: 600px) {
+  .game-shell__intro,
+  .game-shell__result {
+    padding: var(--space-10) var(--space-8);
+  }
+
+  .game-shell__play-body {
+    padding: var(--space-8);
+  }
+
+  .game-shell__result-actions {
+    flex-direction: row;
+  }
+
+  .game-shell__result-actions .button {
+    flex: 1;
+  }
+}

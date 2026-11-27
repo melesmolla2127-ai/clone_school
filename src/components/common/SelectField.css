@@ -1,0 +1,21 @@
+.select-field select {
+  min-width: 0;
+  width: 100%;
+  flex: 1;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.select-field select:invalid {
+  color: #94a3b8;
+}
+
+.select-field__chevron {
+  flex: none;
+  color: var(--color-text-secondary);
+}

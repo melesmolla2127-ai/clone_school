@@ -1,0 +1,108 @@
+.unit-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-base);
+}
+
+.unit-card:hover {
+  transform: translateX(3px);
+  border-color: var(--color-blue-light);
+  box-shadow: var(--shadow-md);
+}
+
+.unit-card__number {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: none;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--unit-soft, var(--color-blue-soft));
+  color: var(--unit-color, var(--color-blue-primary));
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.unit-card__copy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.unit-card__topline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.unit-card__topline strong {
+  min-width: 0;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.unit-card__done {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.unit-card__copy small {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.unit-card__counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--color-text-secondary);
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.unit-card__counts span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.unit-card__chevron {
+  flex: none;
+  color: var(--color-text-secondary);
+}
+
+.unit-card--blue { --unit-soft: #dbeafe; --unit-color: #2563eb; }
+.unit-card--sky { --unit-soft: #e0f2fe; --unit-color: #0284c7; }
+.unit-card--violet { --unit-soft: #ede9fe; --unit-color: #7c3aed; }
+.unit-card--green { --unit-soft: #dcfce7; --unit-color: #16a34a; }
+.unit-card--rose { --unit-soft: #ffe4e6; --unit-color: #e11d48; }
+.unit-card--indigo { --unit-soft: #e0e7ff; --unit-color: #4f46e5; }
+.unit-card--teal { --unit-soft: #ccfbf1; --unit-color: #0d9488; }
+.unit-card--cyan { --unit-soft: #cffafe; --unit-color: #0891b2; }
+.unit-card--amber { --unit-soft: #fef3c7; --unit-color: #d97706; }

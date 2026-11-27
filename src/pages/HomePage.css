@@ -1,0 +1,28 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.home-page__grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 900px) {
+  .home-page {
+    gap: 28px;
+  }
+
+  .home-page__grid {
+    gap: 24px;
+  }
+
+  .home-page__grid--insights {
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  }
+
+  .home-page__grid--assist {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

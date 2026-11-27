@@ -1,0 +1,131 @@
+.unit-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.unit-page__complete-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: var(--radius-full);
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.unit-progress-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, var(--color-white), var(--color-blue-soft));
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.unit-progress-card__kicker,
+.unit-objectives__kicker {
+  color: var(--color-blue-primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.unit-progress-card h2 {
+  margin-top: 6px;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.unit-progress-card p {
+  margin-top: 7px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.unit-progress-card .button {
+  width: 100%;
+}
+
+.unit-objectives {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.unit-objectives__heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.unit-objectives__icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: none;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--color-blue-soft);
+  color: var(--color-blue-primary);
+}
+
+.unit-objectives h2 {
+  margin-top: 4px;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.unit-objectives ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.unit-objectives li {
+  display: flex;
+  gap: 9px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.unit-objectives li svg {
+  flex: none;
+  margin-top: 1px;
+  color: var(--color-blue-primary);
+}
+
+@media (min-width: 760px) {
+  .unit-progress-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    align-items: center;
+  }
+
+  .unit-progress-card__copy {
+    grid-column: 1;
+  }
+
+  .unit-progress-card .progress-track {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .unit-progress-card .button {
+    grid-column: 1 / -1;
+    width: auto;
+    justify-self: start;
+  }
+}

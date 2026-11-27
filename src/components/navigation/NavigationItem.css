@@ -1,0 +1,109 @@
+.app-nav__item {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 52px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 6px 4px;
+  border-radius: 18px;
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.app-nav__item:hover {
+  color: var(--color-white);
+}
+
+.app-nav__item:active {
+  transform: scale(0.96);
+}
+
+.app-nav__icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 12px;
+  transition: background var(--transition-fast);
+}
+
+.app-nav__label {
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-nav__item--active {
+  background: rgba(59, 130, 246, 0.18);
+  color: var(--color-white);
+}
+
+.app-nav__item--active .app-nav__icon {
+  background: rgba(59, 130, 246, 0.22);
+  color: var(--color-blue-light);
+}
+
+.app-nav__item--primary {
+  z-index: 1;
+  min-height: 66px;
+  margin-top: -23px;
+  padding: 4px;
+  border: 4px solid rgba(7, 20, 38, 0.92);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-blue-bright), var(--color-blue-primary));
+  color: var(--color-white);
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.42);
+}
+
+.app-nav__item--primary .app-nav__icon {
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  color: var(--color-white);
+}
+
+.app-nav__item--primary .app-nav__label {
+  font-size: 9px;
+}
+
+.app-nav__item--primary:hover {
+  background: linear-gradient(135deg, #60a5fa, var(--color-blue-primary));
+}
+
+.app-nav__item--primary.app-nav__item--active {
+  background: linear-gradient(135deg, #60a5fa, var(--color-blue-primary));
+  box-shadow:
+    0 0 0 6px rgba(59, 130, 246, 0.16),
+    0 16px 32px rgba(37, 99, 235, 0.5);
+}
+
+@media (min-width: 900px) {
+  .app-nav__item {
+    min-height: 56px;
+  }
+
+  .app-nav__item--primary {
+    min-height: 70px;
+    margin-top: -25px;
+  }
+
+  .app-nav__label {
+    font-size: 11px;
+  }
+
+  .app-nav__item--primary .app-nav__label {
+    font-size: 10px;
+  }
+}

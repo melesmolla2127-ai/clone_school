@@ -1,0 +1,54 @@
+.register-form__step {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: cs-fade-up 320ms var(--ease-out) both;
+}
+
+.register-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.register-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.register-form__info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid rgba(59, 130, 246, 0.14);
+  border-radius: var(--radius-sm);
+  background: var(--color-blue-soft);
+  color: var(--color-blue-primary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.register-form__info svg {
+  flex: none;
+  margin-top: 1px;
+}
+
+.register-form__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.register-form__actions .button {
+  flex: 1;
+}
+
+.register-form__actions .button--secondary {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 560px) {
+  .register-form__grid {
+    grid-template-columns: 1fr;
+  }
+}

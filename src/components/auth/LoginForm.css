@@ -1,0 +1,15 @@
+.login-form__demo-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.login-form__demo-note svg {
+  flex: none;
+  color: var(--color-blue-primary);
+}
