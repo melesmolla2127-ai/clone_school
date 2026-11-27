@@ -7,7 +7,7 @@ const STUDY_DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 function createDefaults() {
   return {
     version: 1,
-    theme: 'system',
+    theme: 'light',
     language: 'en',
     notifications: {
       studyReminders: true,
@@ -96,18 +96,22 @@ export function resetSettings() {
   return getSettings()
 }
 
-export function resolveTheme(theme = 'system') {
+export function resolveTheme(theme = 'light') {
   if (theme === 'light' || theme === 'dark') return theme
-  if (globalThis.matchMedia?.('(prefers-color-scheme: dark)').matches) return 'dark'
+  if (theme === 'system' && globalThis.matchMedia?.('(prefers-color-scheme: dark)').matches) return 'dark'
   return 'light'
 }
 
 export function applySettings(settings = readSettings()) {
   if (typeof document === 'undefined') return
   const root = document.documentElement
-  root.dataset.theme = resolveTheme(settings.theme)
+  const resolvedTheme = resolveTheme(settings.theme)
+  root.dataset.theme = resolvedTheme
   root.dataset.language = settings.language || 'en'
   root.dataset.reducedMotion = settings.learning?.reducedMotion ? 'true' : 'false'
+  document
+    .querySelector('meta[name="theme-color"]')
+    ?.setAttribute('content', resolvedTheme === 'dark' ? '#071426' : '#f8fafc')
 }
 
 export function subscribeToSystemTheme(callback) {
